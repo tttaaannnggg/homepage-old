@@ -29,4 +29,4 @@ class Grid extends Component {
 	}
 }
 
-export default Grid
+export default Grid;

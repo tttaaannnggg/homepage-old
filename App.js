@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header.js';
 import Grid from './components/Grid.js';
 import stoleBeach from './resources/stolebeach.jpg';
+import Detail from './components/Detail.js';
 
 class App extends Component {
   render() {
@@ -27,7 +28,8 @@ class App extends Component {
 		{img:'http://ttaanngg.com/img/masks.jpg',
 		url:'https://drive.google.com/file/d/13ye9MNcgyysPTSa1zr2iheG5xlWgVO8_/view?usp=sharing'}
 	]} />
-	    </div>
+	    {/*<Detail detailItems={['http://ttaanngg.com/img/masks.jpg','http://ttaanngg.com/img/masks.jpg']} />
+	    </div>*/}
     );
   }
 }
