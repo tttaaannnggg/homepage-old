@@ -12,13 +12,17 @@ class Grid extends Component {
 	render(){
 		const grid = [];
 		for (let i = 0; i < this.props.gridItems.length; i++){
+			console.log(this.props.gridItems[i].img);
 			grid.push(
-				<a href={this.props.gridItems[i].url}>
-					<img src={this.props.gridItems[i].img[i]} />
-				</a>)
+				<div className="galleryItem" key={'gallery'+i}>
+					<a href={this.props.gridItems[i].url}>
+						<img src={this.props.gridItems[i].img} />
+					</a>
+				</div>
+			)
 		}
 		return (
-			<div>
+			<div className="galleryGrid">
 				{grid}
 			</div>
 		)

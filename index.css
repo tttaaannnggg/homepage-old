@@ -12,3 +12,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.header{
+	margin-bottom: 1em;
+}
+.navButtons{
+	float: right;
+}
+.wrapper{
+	margin: 1em;
+}
+.galleryGrid{
+	display: grid;
+	/* TODO: figure out sane values for minmax
+	 * What are good breakpoints for mobile?
+	 */
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+	grid-gap: 1rem;
+}
+.galleryItem{
+	grid-column: span 2;
+}
+.galleryItem img{
+	width:100%;
+	height: 100%;
+}
+

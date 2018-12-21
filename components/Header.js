@@ -16,16 +16,20 @@ class Header extends Component {
 		const navButtons = [];
 		for (let i = 0; i < this.props.navNames.length; i++){
 			navButtons.push(
-				<a href={this.props.navUrls[i]} id={"nav" + i} key={"nav" + i}>
+				<a href={this.props.navUrls[i]} key={"nav" + i}>
 					{this.props.navNames[i]}
 				</a>
 			);
-			navButtons.push("/");
+			navButtons.push(" / ");
 		}
+		navButtons.pop();
+		// removes extra " / "
 		return (
-			<div>
+			<div className='header'>
+			<h3>
 				<a href={this.props.home.url}>{this.props.home.txt}</a>
-				<span id='navbuttons'>{navButtons}</span>
+				<span className='navButtons'>{navButtons}</span>
+			</h3>
 			</div>
 		)
 	
