@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 /*
 this is gonna be the header. it will have a link back to the landing page (my name) and a menu that will generate a few links to various pages
-TODO: figure out CSS. Do I want to use a grid?
 */
 
 class Header extends Component {
@@ -20,9 +19,8 @@ class Header extends Component {
 					{this.props.navNames[i]}
 				</a>
 			);
-			navButtons.push(" / ");
+			if (i !== this.props.navNames.length-1) navButtons.push(" / ");
 		}
-		navButtons.pop();
 		// removes extra " / "
 		return (
 			<div className='header'>

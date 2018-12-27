@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 // takes array of image URLs in prop detailItems
 // outputs img tags nested in a div
 // maybe add link functionality?
-// how does routing work?
 class Detail extends Component{
 	constructor(props){
 		super(props);
@@ -13,7 +12,7 @@ class Detail extends Component{
 		const detail=[];
 		for (let i=0; i < this.props.detailItems.length; i++){
 			detail.push(
-				<img src={this.props.detailItems[i]} key={'detail' + i}/>
+				<img src={this.props.detailItems[i]} key={'detail' + i} className="detail"/>
 			);
 		};
 		return(

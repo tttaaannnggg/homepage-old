@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import GridItem from './GridItem.js';
 // this is the gallery grid 
 // it will dynamically generate a grid
 // based off of arrays passed to it
@@ -14,15 +15,11 @@ class Grid extends Component {
 		for (let i = 0; i < this.props.gridItems.length; i++){
 			console.log(this.props.gridItems[i].img);
 			grid.push(
-				<div className="galleryItem" key={'gallery'+i}>
-					<a href={this.props.gridItems[i].url}>
-						<img src={this.props.gridItems[i].img} />
-					</a>
-				</div>
+				<GridItem {...this.props.gridItems[i]} key={'gallery'+i}  />
 			)
 		}
 		return (
-			<div className="galleryGrid">
+			<div className="grid">
 				{grid}
 			</div>
 		)

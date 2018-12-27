@@ -21,7 +21,7 @@ code {
 .wrapper{
 	margin: 1em;
 }
-.galleryGrid{
+.grid{
 	display: grid;
 	/* TODO: figure out sane values for minmax
 	 * What are good breakpoints for mobile?
@@ -29,11 +29,15 @@ code {
 	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 	grid-gap: 1rem;
 }
-.galleryItem{
+.gridItem{
 	grid-column: span 2;
 }
-.galleryItem img{
+.gridItem img{
 	width:100%;
 	height: 100%;
 }
 
+.detail img{
+	width: 100%;
+	height: 100%;
+}
